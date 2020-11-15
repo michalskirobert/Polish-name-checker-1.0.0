@@ -4,7 +4,9 @@ API was made for people studying Polish
 
 ## Technologies
 
-Pure JavaScript and HTML5
+- JavaScript(Async, fetch, await)
+- HTML5
+- JSON
 
 ### About
 
