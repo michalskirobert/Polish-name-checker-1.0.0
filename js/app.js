@@ -7,7 +7,8 @@ searchBar.addEventListener("keyup", (e) => {
   const filteredData = namesArray.filter((data) => {
     return (
       data.name.toLowerCase().includes(searchString) ||
-      data.gender.toLowerCase().includes(searchString)
+      data.gender.toLowerCase().includes(searchString) ||
+      data.key.toLowerCase().includes(searchString)
     );
   });
   displayData(filteredData);
@@ -32,7 +33,7 @@ const displayData = (data) => {
     const htmlString = data
       .map((data) => {
         return `
-            <div class="names__item">
+            <div key=${data.key} class="names__item">
             <img src="./img/${data.gender}.svg" alt="${data.gender} ${data.name}"></img>
                 <h2>${data.name}</h2>
                 <h3>Gender: ${data.gender}</h3>
